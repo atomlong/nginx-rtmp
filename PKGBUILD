@@ -4,9 +4,9 @@
 pkgbase=nginx-rtmp
 _pkgbase=nginx
 pkgname=(nginx-rtmp nginx-rtmp-src)
-pkgver=1.18.0
-_rtmpver=1.2.1
-pkgrel=3
+pkgver=1.21.4
+_rtmpver=1.2.2
+pkgrel=1
 pkgdesc='Lightweight HTTP server and IMAP/POP3 proxy server'
 arch=(x86_64)
 url='https://nginx-rtmp.blogspot.com/'
@@ -27,17 +27,17 @@ backup=(etc/nginx/fastcgi.conf
         etc/logrotate.d/nginx)
 install=nginx.install
 source=($_url/download/nginx-$pkgver.tar.gz{,.asc}
-        hg+http://hg.nginx.org/nginx-tests#revision=c1d167a13c24
+        hg+http://hg.nginx.org/nginx-tests#revision=b28f88e352dd
         https://github.com/arut/nginx-rtmp-module/archive/v$_rtmpver.tar.gz
         service
         logrotate)
 validpgpkeys=(B0F4253373F8F6F510D42178520A9993A1C052F8) # Maxim Dounin <mdounin@mdounin.ru>
 provides=('nginx')
 conflicts=('nginx')
-sha256sums=('4c373e7ab5bf91d34a4f11a0c9496561061ba5eee6020db272a17a7228d35f99'
+sha256sums=('d1f72f474e71bcaaf465dcc7e6f7b6a4705e4b1ed95c581af31df697551f3bfe'
             'SKIP'
             'SKIP'
-            '87aa597400b0b5a05274ee2d23d8cb8224e12686227a0abe31d783b3a645ea37'
+            '07f19b7bffec5e357bb8820c63e5281debd45f5a2e6d46b1636d9202c3e09d78'
             '113bb2c530afd7f81ebccb42e6fa293fd87be2d87c99a32623097c6b97157297'
             '06ebe161af3e761f2e2e35a67c6c0af27bf61aea7cd4ba8b28372ced5e3b3175')
 
